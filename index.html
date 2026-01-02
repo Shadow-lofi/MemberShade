@@ -335,12 +335,12 @@
         <h2>Our Members</h2>
         <div class="grid">
             <div class="card">
-                <img src="https://blogs.vmware.com/wp-content/uploads/sites/26/2020/05/haking_is_the_new_espionage.jpg" alt="ShadowByte photo" class="member-photo">
+                <img src="https://image-optimizer.cyberriskalliance.com/unsafe/1920x0/https://files.cyberriskalliance.com/wp-content/uploads/2024/02/Hacker_AdobeStockImages_cropped-1-scaled.jpg" alt="ShadowByte photo" class="member-photo">
                 <h3>ShadowByte</h3>
                 <p>Emerging from the digital abyss, ShadowByte is the veiled originator of Midnight Codex. A specter in the realm of infiltration and arcane code reversal, he glides through impregnable barriers like mist in the moonlight. Tales murmur of shattered digital empires, orchestrated from the unseen depths. His whispered axiom: 'Secrets pulse in the veins of binary shadows.'</p>
             </div>
             <div class="card">
-                <img src="https://images2.thanhnien.vn/528068263637045248/2025/6/3/tin-tac-174894865008027362128.jpg" alt="NeonGhost photo" class="member-photo">
+                <img src="https://thumbs.dreamstime.com/b/tech-savvy-virtuoso-hacking-girl-navigates-digital-labyrinth-finesse-blending-coding-prowess-cyber-prowess-to-309467092.jpg" alt="NeonGhost photo" class="member-photo">
                 <h3>NeonGhost</h3>
                 <p>NeonGhost haunts the cryptic corridors of encryption, a phantom guardian of quantum enigmas. Cloaked in obscurity, she weaves unbreakable ciphers that defy the gaze of unseen watchers. Echoes of her craft shield the whispers of the oppressed across shadowed networks. Her elusive decree: 'In the glow of neon, privacy endures eternal.'</p>
             </div>
@@ -360,7 +360,7 @@
                 <p>CyberWraith materializes from the cybernetic fog, a harbinger of automated assaults and defenses. Wielding AI as a double-edged sword, he orchestrates symphonies of bots that dance in the digital night. Enigma incarnate: 'Wraiths whisper through wires, commanding the machine horde.'</p>
             </div>
             <div class="card">
-                <img src="https://images.stockcake.com/public/6/d/c/6dc9a118-963c-410a-8ee9-3cf8ff3e11b1_large/hacker-in-shadow-stockcake.jpg" alt="EchoShade photo" class="member-photo">
+                <img src="https://n3sh47.github.io/assets/pictures/avatar.jpeg" alt="EchoShade photo" class="member-photo">
                 <h3>Shade</h3>
                 <p>Shade slithers through the echoes of data streams, an elusive manipulator of artificial intelligences using his favorite language Python🐍. Mastering the dark arts of machine learning to predict and preempt digital incursions, he turns algorithms into weapons of foresight. His spectral presence: 'In the resonance of code, futures unfold unseen.'</p>
             </div>
@@ -414,82 +414,7 @@
     <footer>
         &copy; 2026 Midnight Codex. All rights reserved. Stay in the shadows.
     </footer>
-
-    <script>
-        
-        const canvas = document.getElementById('matrix');
-        const ctx = canvas.getContext('2d');
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+-=[]{}|;:,.<>?';
-        const fontSize = 14;
-        const columns = canvas.width / fontSize;
-
-        const drops = [];
-        for (let x = 0; x < columns; x++) {
-            drops[x] = 1;
-        }
-
-        function draw() {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.fillStyle = '#0F0';
-            ctx.font = fontSize + 'px monospace';
-
-            for (let i = 0; i < drops.length; i++) {
-                const text = chars[Math.floor(Math.random() * chars.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
-
-        setInterval(draw, 33);
-
-        
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-     
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Close mobile menu after click
-                if (window.innerWidth <= 768) {
-                    navLinks.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                }
-            });
-        });
-
-        
-        const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-    </script>
+    <script src="script.js"></script>                                                     
   </body>
 </html>
+
